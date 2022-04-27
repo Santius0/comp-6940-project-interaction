@@ -20,7 +20,7 @@ def yt_query(video_title: str, all_ids: bool = False) -> str or None:
     return vid_ids if all_ids else vid_ids[0]
 
 
-def yt_download_audio(vid_id: str, output_dir=os.getcwd(), filename=None, file_type='wav') -> str or None:
+def yt_download_audio(vid_id: str, output_dir=os.getcwd(), filename=None, file_type='m4a') -> str or None:
     yt_music = YTMusic()
     track = yt_music.get_song(videoId=vid_id)
     song_url = track['microformat']['microformatDataRenderer']['urlCanonical']
