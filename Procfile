@@ -1,1 +1,1 @@
-web: gunicorn songApp.wsgi --log-file -
+web: gunicorn myproject.wsgi --timeout 30 --keep-alive 10 --log-level debug
