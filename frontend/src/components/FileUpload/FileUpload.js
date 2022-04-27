@@ -1,8 +1,8 @@
-import React from 'react'
-import { Box, makeStyles, Typography } from '@material-ui/core'
-import CloudUploadIcon from '@material-ui/icons/CloudUpload'
-import clsx from 'clsx'
-import FileUploadDefaultImage from '../../assets/images/luffy_nika.png';
+import React from 'react';
+import { Box, makeStyles, Typography } from '@material-ui/core';
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
+import clsx from 'clsx';
+import FileUploadDefaultImage from "../../assets/images/drop-down.png";
 
 
 const useStyle = makeStyles({
