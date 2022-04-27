@@ -14,7 +14,7 @@ import os
 from pathlib import Path
 import environ
 import django_heroku
-django_heroku.settings(locals())
+
 
 env = environ.Env(
     DEBUG=(bool, False)
@@ -31,7 +31,6 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env('SECRET_KEY')
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = ['*']
@@ -156,3 +155,5 @@ SPOTIPY_CLIENT_SECRET = env('SPOTIPY_CLIENT_SECRET')
 SPOTIPY_REDIRECT_URI = env('SPOTIPY_REDIRECT_URI')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+django_heroku.settings(locals())
