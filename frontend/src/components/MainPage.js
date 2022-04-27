@@ -32,7 +32,7 @@ const MainPage = () => {
     const [selectedSubset, setSelectedSubset] = useState([]);
     const [songDataList, setSongDataList] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [currentSongPage, setCurrentSongPage] = useState(8);
+    const [currentSongPage, setCurrentSongPage] = useState(0);
     const [currentPrediction, setCurrentPrediction] = useState(null);
     const [predictions, setPredictions] = useState([]);
     // const [includePredicted, setIncludePredicted] = useState(true);

@@ -10,18 +10,16 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-
 MEDIA_ROOT = settings.MEDIA_ROOT
-# billboard_data = os.path.join(MEDIA_ROOT, "hot-100_all.csv")
-# DIR = os.path.dirname(os.path.dirname(__file__))
 
-data_df = pd.read_csv(os.path.join(MEDIA_ROOT, "data.csv"))
+data_df = pd.read_csv(os.path.join(MEDIA_ROOT, "data_app.csv"))
 data_df.drop(labels='Unnamed: 0', axis=1, inplace=True)
 
-pop_metrics_df = pd.read_csv(os.path.join(MEDIA_ROOT, "popularity_metrics.csv"))
+pop_metrics_df = pd.read_csv(os.path.join(MEDIA_ROOT, "popularity_metrics_app.csv"))
 pop_metrics_df['index'] = pop_metrics_df.apply(lambda x: x['Unnamed: 0'], axis=1)
 pop_metrics_df.drop(labels='Unnamed: 0', axis=1, inplace=True)
 pop_metrics_df['avg_rank_score'] = pop_metrics_df['avg_rank_score'].apply(lambda x: round(x, 2))
+pop_metrics_df['debut_rank'] = pop_metrics_df['debut_rank'].apply(lambda x: round(1/x))
 
 spotify_df = pd.read_csv(os.path.join(MEDIA_ROOT, "songs.csv"))
 
