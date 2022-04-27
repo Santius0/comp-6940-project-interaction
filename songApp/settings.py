@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 from pathlib import Path
 import environ
+import django_heroku
+django_heroku.settings(locals())
 
 env = environ.Env(
     DEBUG=(bool, False)
@@ -55,6 +57,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'core.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -140,6 +143,8 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATICFILES_DIRS = [
     BASE_DIR / 'frontend/build/static',
 ]
@@ -149,3 +154,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 SPOTIPY_CLIENT_ID = env('SPOTIPY_CLIENT_ID')
 SPOTIPY_CLIENT_SECRET = env('SPOTIPY_CLIENT_SECRET')
 SPOTIPY_REDIRECT_URI = env('SPOTIPY_REDIRECT_URI')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
