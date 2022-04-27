@@ -39,7 +39,7 @@ const MainPage = () => {
 
     useEffect(() => {
         setLoading(true);
-        axios.get("http://127.0.0.1:8000/api/fetch-all-songs")
+        axios.get(process.env.REACT_APP_BACKEND_URL + "/fetch-all-songs")
             .then(res => {
                 // eslint-disable-next-line no-eval
                 const data = eval(res.data);

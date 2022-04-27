@@ -40,7 +40,7 @@ const Prediction = ({data, currentPrediction, predictions, onNewPrediction, upda
 
     const querySong = () => {
         setLoading(true);
-        axios.post("http://127.0.0.1:8000/api/spotify-search", {
+        axios.post(process.env.REACT_APP_BACKEND_URL + "/spotify-search", {
             search_string: searchString
         })
             .then(res => {
@@ -62,7 +62,7 @@ const Prediction = ({data, currentPrediction, predictions, onNewPrediction, upda
     const handleSubmitPrediction = (id, name) => {
         console.log(id);
         setPredictionLoading(true);
-        axios.post("http://127.0.0.1:8000/api/predict", {
+        axios.post(process.env.REACT_APP_BACKEND_URL + "/predict", {
             cancelToken: cancelTokenSource.token,
             song_id: id,
             song_name: name
