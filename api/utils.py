@@ -18,8 +18,6 @@ data_df.drop(labels='Unnamed: 0', axis=1, inplace=True)
 pop_metrics_df = pd.read_csv(os.path.join(MEDIA_ROOT, "popularity_metrics_app.csv"))
 pop_metrics_df['index'] = pop_metrics_df.apply(lambda x: x['Unnamed: 0'], axis=1)
 pop_metrics_df.drop(labels='Unnamed: 0', axis=1, inplace=True)
-pop_metrics_df['avg_rank_score'] = pop_metrics_df['avg_rank_score'].apply(lambda x: round(x, 2))
-pop_metrics_df['debut_rank'] = pop_metrics_df['debut_rank'].apply(lambda x: round(1/x))
 
 spotify_df = pd.read_csv(os.path.join(MEDIA_ROOT, "songs.csv"))
 
@@ -62,16 +60,6 @@ def process_song(data):
     audio_file = None
     song_id = data['song_id']
     song_name = data['song_name']
-
-    # song_in_dataset = spotify_df[spotify_df['spotify_name'] == song_name]
-    # if len(song_in_dataset) > 0:
-    # song = complete_df[complete_df.index == 965]
-    # print(song)
-    # return {
-    #     "song_data": json.dumps(song.to_dict('records')),
-    #     "prediction": 12,
-    #     "prediction_type": "regression",
-    # }
 
     # get spotify metadata
     song_data, spotify_audio_features, audio_analysis = song_id_lookup(song_id)
