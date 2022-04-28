@@ -5,7 +5,7 @@ This component of the project takes the form of a Django Web Application, with a
 
 The 'Prediction' page of this application doesn't work on Heroku as the time and resources required to extract all the audio features and run a prediction are not permitted by Heroku, especially using a free account. If downloaded and run locally it should execute.
 
-### Installation Guide - See {Django Getting Started}[https://www.djangoproject.com/start/]
+### Installation Guide - See [Django Getting Started]{https://www.djangoproject.com/start/}
 1. Clone the repository
 2. Fill out .env with a valid Spotify API key
 3. Install the application requirements via "pip install -r requirements.txt" from the project's root directory. A virtual environment is recommemded.
