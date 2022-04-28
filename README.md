@@ -6,7 +6,7 @@ The 'Prediction' page of this application doesn't work on Heroku as the time and
 ### Installation Guide
 1. Clone the repository
 2. Fill out .env with a valid Spotify API key
-3. Install the application requirements via "pip install -r requirements.txt" from the project's root directory
+3. Install the application requirements via "pip install -r requirements.txt" from the project's root directory. A virtual environment is recommemded.
 4. Run the application locally using "python manage.py runserver" when in the projects root direectory
 
 
