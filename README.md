@@ -10,7 +10,7 @@ The 'Prediction' page of this application doesn't work on Heroku as the time and
 4. run the application locally using python manage.py runserver when in the projects root direectory
 
 
-###About the application
+### About the application
 1. Lists all songs present in the configured dataset based on the past two years of the Billboard hot-100
 2. Allows users to compare a song's audio featurs alongside a specified popularity metric, by plotting the audio feature along the x-axis and the popularity metric along the y-axis. Users can hover over datapoints to see the relative position of a given song.
 3. Users can search for a song (this users the spotify as a search backend), and generate a prediction for that song. That song is then added to the plots and can be compared to others. NOTE: Only the 'top_50' and 'debut_rank' y-variables will have these new data points present as prediction models for only those two have been added.
