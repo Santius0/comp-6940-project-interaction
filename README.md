@@ -4,6 +4,7 @@
 This component of the project takes the form of a Django Web Application, with a built in React app as the frontend.
 
 The 'Prediction' page of this application doesn't work on Heroku as the time and resources required to extract all the audio features and run a prediction are not permitted by Heroku, especially using a free account. If downloaded and run locally it should execute.
+Note: [FFmpeg](https://ffmpeg.org/) has to be installed on the machine.
 
 ### Installation Guide - See [Django Getting Started](https://www.djangoproject.com/start/) for additional assistance.
 1. Clone the repository
