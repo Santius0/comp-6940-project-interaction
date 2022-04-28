@@ -3,7 +3,7 @@
 ### HomePage: https://cryptic-ridge-63537.herokuapp.com/
 The 'Prediction' page of this application doesn't work on Heroku as the time and resources required to extract all the audio features and run a prediction are not permitted by Heroku, especially using a free account. If downloaded and run locally it should execute.
 
-###Installation Guide
+### Installation Guide
 1. Clone the repository
 2. Fill out .env with a vid Spotify API key
 3. Install the application requirements via pip install -r requirements.txt
