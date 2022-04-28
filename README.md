@@ -7,9 +7,8 @@ The 'Prediction' page of this application doesn't work on Heroku as the time and
 
 ### Installation Guide - See [Django Getting Started](https://www.djangoproject.com/start/) for additional assistance.
 1. Clone the repository
-2. Fill out .env with valid Spotify API credentials.
+2. Fill out .env with valid Spotify API credentials. See [Spotify Web](https://developer.spotify.com/documentation/web-api/quick-start/).
       This file should have no whitespaces outside of quotes. Example: SPOTIFY_API_KEY='api-key' will work but SPOTIFY_API_KEY = 'api-key' will not.
-      See [Spotify Web](https://developer.spotify.com/documentation/web-api/quick-start/).
 3. Create and activate a virtual environment a virtual environment in the project's root directory. See [Virtualenv](https://virtualenv.pypa.io/en/latest/installation.html).
 4. Install the application requirements in the virtual environment via "pip install -r requirements.txt" from the project's root directory.
 5. Run the application locally using "python manage.py runserver" when in the projects root directory with the created virtual environment active.
