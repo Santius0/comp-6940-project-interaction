@@ -16,7 +16,6 @@ data_df = pd.read_csv(os.path.join(MEDIA_ROOT, "data_app.csv"))
 data_df.drop(labels='Unnamed: 0', axis=1, inplace=True)
 
 pop_metrics_df = pd.read_csv(os.path.join(MEDIA_ROOT, "popularity_metrics_app.csv"))
-pop_metrics_df['index'] = pop_metrics_df.apply(lambda x: x['Unnamed: 0'], axis=1)
 pop_metrics_df.drop(labels='Unnamed: 0', axis=1, inplace=True)
 
 spotify_df = pd.read_csv(os.path.join(MEDIA_ROOT, "songs.csv"))
