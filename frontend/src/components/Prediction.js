@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Box, Button, LinearProgress, Typography} from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import axios from "axios";
+import {toast} from "react-toastify";
 
 import TextInputComponent from "./TextInput.component";
 import MusicLoader from "./MusicLoader/MusicLoader";
@@ -36,6 +37,7 @@ const Prediction = ({predictions, onNewPrediction, updateCurrentPrediction = () 
             })
             .catch(err => {
                 console.log(err);
+                toast.error("Song Query Failed!")
             })
             .finally(() => setLoading(false));
     }
@@ -65,6 +67,8 @@ const Prediction = ({predictions, onNewPrediction, updateCurrentPrediction = () 
             })
             .catch(err => {
                 console.log(err);
+                toast.error("Song Processing Failed!")
+                if(process.env.NODE_ENV === 'production') toast.error("This function doesn't work on Heroku!")
             })
             .finally(() => setPredictionLoading(false));
     }

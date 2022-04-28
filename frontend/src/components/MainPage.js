@@ -14,6 +14,7 @@ import axios from "axios";
 import Prediction from "./Prediction";
 import {Grid} from "@mui/material";
 import AllSongs from "./AllSongs";
+import {toast} from "react-toastify";
 
 const PREDICTED_VARIABLE = "debut_rank";
 const PREDICTED_VARIABLE2 = "top_50";
@@ -55,6 +56,7 @@ const MainPage = () => {
             })
             .catch(err => {
                 console.log(err);
+                toast.error("Error Fetching Song Data! Try Again Later.");
             })
             .finally(() => setLoading(false));
     }, [])
