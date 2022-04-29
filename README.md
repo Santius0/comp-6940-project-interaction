@@ -1,14 +1,14 @@
 # comp-6940-project-interaction
 
 ### HomePage: https://cryptic-ridge-63537.herokuapp.com/
-This component of the project takes the form of a Django Web Application, with a built in React app as the frontend.
+This component of the project takes the form of a Django Web Application, with a built-in React app as the frontend.
 
 The 'Prediction' page of this application doesn't work on Heroku as the time and resources required to extract all the audio features and run a prediction are not permitted by Heroku, especially using a free account. If downloaded and run locally it should execute.
 Note: [FFmpeg](https://ffmpeg.org/) has to be installed on the machine.
 
 ### Installation Guide - See [Django Getting Started](https://www.djangoproject.com/start/) for additional assistance.
 1. Clone the repository
-2. Fill out .env with valid Spotify API credentials. See [Spotify Web](https://developer.spotify.com/documentation/web-api/quick-start/).
+2. Fill out .env with valid Spotify API credentials. See [Spotify Web API](https://developer.spotify.com/documentation/web-api/quick-start/).
       This file should have no whitespaces outside of quotes. Example: SPOTIFY_API_KEY='api-key' will work but SPOTIFY_API_KEY = 'api-key' will not.
 3. Create and activate a virtual environment a virtual environment in the project's root directory. See [Virtualenv](https://virtualenv.pypa.io/en/latest/installation.html).
 4. Install the application requirements in the virtual environment via "pip install -r requirements.txt" from the project's root directory.
