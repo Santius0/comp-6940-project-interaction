@@ -9,10 +9,12 @@ Note: [FFmpeg](https://ffmpeg.org/) has to be installed on the machine.
 ### Installation Guide - See [Django Getting Started](https://www.djangoproject.com/start/) for additional assistance.
 1. Clone the repository
 2. Fill out .env with valid Spotify API credentials. See [Spotify Web API](https://developer.spotify.com/documentation/web-api/quick-start/).
-      This file should have no whitespaces outside of quotes. Example: SPOTIFY_API_KEY='api-key' will work but SPOTIFY_API_KEY = 'api-key' will not.
-3. Create and activate a virtual environment a virtual environment in the project's root directory. See [Virtualenv](https://virtualenv.pypa.io/en/latest/installation.html).
-4. Install the application requirements in the virtual environment via "pip install -r requirements.txt" from the project's root directory.
-5. Run the application locally using "python manage.py runserver" when in the projects root directory with the created virtual environment active.
+      This file should have no whitespaces outside of quotes. Example: SPOTIFY_API_KEY='api-key' will work but SPOTIFY_API_KEY = 'api-key' will not.<br/>
+      UPDATE: Decided to leave the Spotify keys in to allow for easier installation and grading. Will just delete them and regenerate them in about a month.
+
+4. Create and activate a virtual environment a virtual environment in the project's root directory. See [Virtualenv](https://virtualenv.pypa.io/en/latest/installation.html).
+5. Install the application requirements in the virtual environment via "pip install -r requirements.txt" from the project's root directory.
+6. Run the application locally using "python manage.py runserver" when in the projects root directory with the created virtual environment active.
 
 
 ### About the application
