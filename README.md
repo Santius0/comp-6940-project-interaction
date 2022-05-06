@@ -25,4 +25,4 @@ Note: [FFmpeg](https://ffmpeg.org/) has to be installed on the machine.
     Again! This prediction will not work on the remote site due to computation limitations, to see it in action it must be built locally.
     
     
-Code Repository: [https://github.com/Santius0/comp-6940-project.git](https://github.com/Santius0/comp-6940-project.git)
+Main Code Repository: [https://github.com/Santius0/comp-6940-project.git](https://github.com/Santius0/comp-6940-project.git)
