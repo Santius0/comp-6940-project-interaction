@@ -23,3 +23,6 @@ Note: [FFmpeg](https://ffmpeg.org/) has to be installed on the machine.
 3. Users can search for a song (the spotify search is used as the search backend), and generate a prediction for that song. That song is then added to the plots and can be compared to others. NOTE: Only the 'top_50' and 'debut_rank' y-variables will have these new data points present as prediction models for only those two have been added.
     That is one regression model estimating a song's debut_rank and one classification model estimating a song's presence in the top 50. These are a Ridge Regression and SVM     Classifier respectively, as mentioned in the submitted paper.
     Again! This prediction will not work on the remote site due to computation limitations, to see it in action it must be built locally.
+    
+    
+Code Repository: [https://github.com/Santius0/comp-6940-project.git](https://github.com/Santius0/comp-6940-project.git)
